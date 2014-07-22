@@ -10,9 +10,12 @@
 
 @interface NCLabel : UILabel
 
-@property(nonatomic, readwrite) CGFloat keyboardEnd, coeff;
+@property(nonatomic, readwrite) UIEdgeInsets textInset;
+
+@property(nonatomic, readwrite) BOOL showingWords;
 
 + (NSString *)wordOrCharCountStringFromTextView:(UITextView *)textView isChar:(BOOL)counterType;
+
 - (instancetype)initWithFrame:(CGRect)frame andFont:(UIFont *)font;
 
 @end
